@@ -17,6 +17,18 @@ in the ranking.
 
 As a bonus, authentication was added using Passport and a route with general ranking of users (sum of all scores in all exercises/movements).
 
+## ABOUT
+
+The API is composed of 3 entities: User, Movement and Personal Record.
+
+**User**
+They are the users of the application, athletes.
+
+**Movement**
+Are the exercises practiced by users.
+
+**Personal Record**
+It is the record of user records in each movement practiced.
 
 
 
