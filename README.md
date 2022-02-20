@@ -70,16 +70,16 @@ User 1 = 100 + 180 + 150 + 110 = 540<br>
 User 2 = 110 + 140 + 190 =  440<br>
 User 3 = 170 + 120 + 130 = 420<br>
 
-Maximum score = 190 (user 2)
-------------------------------------------------------
+Maximum score = 190 (user 2)<br><br>
+
 Movement 2 (Back Squat) - Records per user<br>
 
 User 1 = 130 + 110 = 240<br>
 User 2 = 130 + 120 = 250<br>
 User 3 = 125 + 120 = 245<br>
 
-Maximum score = 130 (user 1 and user 2)
-------------------------------------------------------
+Maximum score = 130 (user 1 and user 2)<br><br>
+
 Movement 3 (Bench Press) - Records per user<br>
 
 User 1 = 130 + 110 = 240<br>
