@@ -16,7 +16,7 @@ class CreatePersonalRecordsTable extends Migration
         Schema::create('personal_records', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users');
-            $table->foreignId('movement_id')->references('id')->on('users');
+            $table->foreignId('movement_id')->references('id')->on('movements');
             $table->float('value');
             $table->dateTime('date');
             $table->timestamps();
