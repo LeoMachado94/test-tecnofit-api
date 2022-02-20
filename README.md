@@ -42,9 +42,9 @@ composer install
 
 3. Create an .env file with the same structure as .env.example and set the following parameters according to your database:
 ```
-DB_DATABASE=your_database_name_here<br>
-DB_USERNAME=your_database_user_here<br>
-DB_PASSWORD=your_database_password_here<br>
+DB_DATABASE=your_database_name_here
+DB_USERNAME=your_database_user_here
+DB_PASSWORD=your_database_password_here
 ```
 
 4. If your database is not yet created, create a new one using the following command: 'php artisan database:create'. By default the database will be created with the name defined in DB_DATABASE of the .env file. If you already have a database created and empty, skip this step.
