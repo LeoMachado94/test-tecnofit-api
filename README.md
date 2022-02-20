@@ -35,42 +35,45 @@ The API is composed of 3 entities: User, Movement and Personal Record.
 ## CONFIGURATION:
 
 1. Clone the repository.
-2. Enter the project folder and install the dependencies:
+2. Create an .env file with the same structure as .env.example and set the following parameters according to your database:
+```
+DB_DATABASE=your_database_name_here (default value is test_tecnofit_api)
+DB_USERNAME=your_database_user_here
+DB_PASSWORD=your_database_password_here
+```
+3. Enter the project folder and install the dependencies:
 ```
 composer install
 ```
 
-3. Create an .env file with the same structure as .env.example and set the following parameters according to your database:
-```
-DB_DATABASE=your_database_name_here
-DB_USERNAME=your_database_user_here
-DB_PASSWORD=your_database_password_here
-```
-
-4. If your database is not yet created, create a new one using the following command: 'php artisan database:create'. By default the database will be created with the name defined in DB_DATABASE of the .env file. If you already have a database created and empty, skip this step.
-
+4. If your database is not yet created, create a new one using the following command: `php artisan database:create`. By default the database will be created with the name defined in DB_DATABASE of the .env file. If you already have a database created and empty, skip this step.
 5. Run migrations to create database tables:
 ```
 php artisan migrate
 ```
-
 6. Run seeders to populate the database:
 ```
 php artisan db:seed
 ```
-
 7. Start the API server however you like. The simplest way is to use the built-in php server, for that use the command below:
 ```
 php artisan serve
 ```
-
-8. Install passport with the command below, 2 clients will be created. Copy the data from the second client and put it in the .env file under PASSPORT_CLIENT_ID and PASSPORT_CLIENT_SECRET. Also define the PASSPORT_ENDPOINT, it will vary according to the server you are using, if you use the built-in php server through the command "php artisan serve", set the value to "http://localhost:8000/oauth/token" if it is another server/host use the pattern "{host}/oauth/token".
+8. Install passport with the command below, 2 clients will be created. Copy the data from the second client and put it in the .env file under **PASSPORT_CLIENT_ID** and **PASSPORT_CLIENT_SECRET**. Also define the **PASSPORT_ENDPOINT**, it will vary according to the server you are using, if you use the built-in php server through the command `php artisan serve`, set the value to `http://localhost:8000/oauth/token` if it is another server/host use the pattern `{host}/oauth/token`.
 ```
 php artisan passport:install
 ```
 9. Import the JSON file with the api routes in postman or software of your choice to test the API routes.
 [Download here](https://github.com/LeoMachado94/test-tecnofit-api/blob/main/Tecnofit%20API%20-%20Test.postman_collection.json)
 <br><br>
+
+## USERS FOR TESTS
+When populating the database, 3 users are created, all of them with the same password. To login, you will need the email of these users.
+```
+joao@tecnofit.com.br
+jose@tecnofit.com.br
+paulo@tecnofit.com.br
+```
 
 ## NOTES
 <p>1. The api url base is composed of the host and the api prefix, like this: {host}/api. To follow the project pattern and test without having to modify the defined postman routes, create an environment and define the host variable in this pattern (host + prefix).</p>
