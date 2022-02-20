@@ -45,30 +45,33 @@ DB_PASSWORD=your_database_password_here
 ```
 composer install
 ```
-
-4. If your database is not yet created, create a new one using the following command: `php artisan database:create`. By default the database will be created with the name defined in DB_DATABASE of the .env file. If you already have a database created and empty, skip this step.
-5. Run migrations to create database tables:
+4. If the APP_KEY (.env) is not generated after installing the packages, generate it with the command below:
+```
+php artisan key:generate
+```
+5. If your database is not yet created, create a new one using the following command: `php artisan database:create`. By default the database will be created with the name defined in DB_DATABASE of the .env file. If you already have a database created and empty, skip this step.
+6. Run migrations to create database tables:
 ```
 php artisan migrate
 ```
-6. Run seeders to populate the database:
+7. Run seeders to populate the database:
 ```
 php artisan db:seed
 ```
-7. Start the API server however you like. The simplest way is to use the built-in php server, for that use the command below:
+8. Start the API server however you like. The simplest way is to use the built-in php server, for that use the command below:
 ```
 php artisan serve
 ```
-8. Install passport with the command below, 2 clients will be created. Copy the data from the second client and put it in the .env file under **PASSPORT_CLIENT_ID** and **PASSPORT_CLIENT_SECRET**. Also define the **PASSPORT_ENDPOINT**, it will vary according to the server you are using, if you use the built-in php server through the command `php artisan serve`, set the value to `http://localhost:8000/oauth/token` if it is another server/host use the pattern `{host}/oauth/token`.
+9. Install passport with the command below, 2 clients will be created. Copy the data from the second client and put it in the .env file under **PASSPORT_CLIENT_ID** and **PASSPORT_CLIENT_SECRET**. Also define the **PASSPORT_ENDPOINT**, it will vary according to the server you are using, if you use the built-in php server through the command `php artisan serve`, set the value to `http://localhost:8000/oauth/token` if it is another server/host use the pattern `{host}/oauth/token`.
 ```
 php artisan passport:install
 ```
-9. Import the JSON file with the api routes in postman or software of your choice to test the API routes.
+10. Import the JSON file with the api routes in postman or software of your choice to test the API routes.
 [Download here](https://github.com/LeoMachado94/test-tecnofit-api/blob/main/Tecnofit%20API%20-%20Test.postman_collection.json)
 <br><br>
 
 ## USERS FOR TESTS
-When populating the database, 3 users are created, all of them with the same password. To login, you will need the email of these users.
+When populating the database, 3 users are created, all of them with the same password `password`. To login, you will need the email of these users.
 ```
 joao@tecnofit.com.br
 jose@tecnofit.com.br
@@ -76,9 +79,9 @@ paulo@tecnofit.com.br
 ```
 
 ## NOTES
-<p>1. The api url base is composed of the host and the api prefix, like this: {host}/api. To follow the project pattern and test without having to modify the defined postman routes, create an environment and define the host variable in this pattern (host + prefix).</p>
-<p>2. To avoid compatibility issues, use php 8.0.x.</p>
-<br><br>
+1. In the endpoint `{{host}}/ranking/movement/2` you can change the 2 (Back Squat) to 1 (Deadlift) or 3 (Bench Press), these are the movement ids in the database.
+2. The api url base is composed of the host and the api prefix, like this: {host}/api. To follow the project pattern and test without having to modify the defined postman routes, create an environment and define the host variable in this pattern (host + prefix).
+3. To avoid compatibility issues, use php 8.0.x.
 
 ## DATABASE RESUME (rows/records)
 <p>

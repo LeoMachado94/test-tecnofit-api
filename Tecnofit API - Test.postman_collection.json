@@ -21,7 +21,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"cordia86@example.net\",\n    \"password\": \"password\"\n}",
+							"raw": "{\n    \"username\": \"joao@tecnofit.com.br\",\n    \"password\": \"password\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -86,7 +86,7 @@
 			"name": "Ranking - Personal Records",
 			"item": [
 				{
-					"name": "Personal Records By Movement",
+					"name": "Personal Records General",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -127,7 +127,7 @@
 					"response": []
 				},
 				{
-					"name": "Personal Records General",
+					"name": "Personal Records By Movement",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
