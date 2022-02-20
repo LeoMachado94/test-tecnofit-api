@@ -50,7 +50,7 @@ DB_USERNAME=your_database_user_here<br>
 DB_PASSWORD=your_database_password_here<br>
 ```
 
-<p>4. If your database is not yet created, create a new one using the following command: **php artisan database:create**. By default the database will be created with the name defined in DB_DATABASE of the .env file. If you already have a database created and empty, skip this step;</p>
+<p>4. If your database is not yet created, create a new one using the following command: 'php artisan database:create'. By default the database will be created with the name defined in DB_DATABASE of the .env file. If you already have a database created and empty, skip this step;</p>
 
 <p>5. Run migrations to create database tables:</p>
 <p>
