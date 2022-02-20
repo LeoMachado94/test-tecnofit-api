@@ -63,7 +63,7 @@ DB_PASSWORD=your_database_password_here<br>
 <p>2. To avoid compatibility issues, use php 8.0.x.</p>
 <br><br>
 
-### DATABASE RESUME (rows/records)
+## DATABASE RESUME (rows/records)
 <p>
 Movement 1 (Deadlift) - Records per user<br>
 
