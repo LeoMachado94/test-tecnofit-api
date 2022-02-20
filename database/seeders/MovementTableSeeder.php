@@ -12,7 +12,7 @@ class MovementTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         Movement::factory()->create([
             'id'   => 1,

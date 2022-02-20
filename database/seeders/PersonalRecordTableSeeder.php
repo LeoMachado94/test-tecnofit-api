@@ -13,7 +13,7 @@ class PersonalRecordTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         PersonalRecord::create([
             'user_id'     => 1,
